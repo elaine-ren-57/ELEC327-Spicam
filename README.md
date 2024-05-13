@@ -1,4 +1,5 @@
 # Project Overview - SpiCAM
+### [Video Link](https://drive.google.com/file/d/1QonESR2_PfQ0y7zj4STMoZRRY8AIeMb-/view?usp=drive_link)
 Our project SpiCam is a security camera module that allows users to monitor their home/room while they are away.
 SpiCam features an analog joystick, which the users can use to control the pan and tilt motion of the camera and maximize their field of vision, capturing every angle of the room.
 It also features an automatic facial detection component, where a box will be drawn around the detected face of a potential intruder. 
@@ -20,5 +21,4 @@ a bounding box around the detection is drawn and outputted to the video feed. In
 To allow remote connection from users' phones to the MSP 430 board, an HC-05 Bluetooth transceiver module is used. The TX and RX of the HC-05 is connected to the P1.2 (RX) and P1.1 (TX) of the board respectively to set up USCI communication. The Baud Rate is set to 9600 for compatibility and [Bluetooth Terminal HC-05 mobile app](https://play.google.com/store/apps/details?id=project.bluetoothterminal&hl=en_US&gl=US) is downloaded. The users can connect to the HC-05 Bluetooth through the mobile app and send messages to the board. Each time the RX buffer on the MSP430 board receives a message from the phone, the USCI0RX_ISR interrupt is triggered. When the user sends a '1' over the app, the alarm (piezo buzzer) is connected to P1.0 of the board turns on and a message "alarm is on" is sent via the TX buffer and displayed in the app. Similarly, when the user sends a '2' over the phone the alarm then turns off and the message "alarm is off" is printed in the app. 
 ### Block Diagram
 ![block diagram](Block_Diagram-1.jpg)
-Video link:
-https://drive.google.com/file/d/1QonESR2_PfQ0y7zj4STMoZRRY8AIeMb-/view?usp=drive_link
+
